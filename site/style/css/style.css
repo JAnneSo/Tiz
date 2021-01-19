@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  color: #555;
+}
+
+body h1 {
+  font-weight: 400;
+  margin-bottom: 0px;
+  margin-top: 50px;
+}
+
+body h2 {
+  font-weight: 400;
+  font-size: 1.4em;
+}
+
+body h3 {
+  font-weight: 400;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+body h4 {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+body a {
+  text-decoration: none;
+}
+
+header {
+  background: url(../../images/hero-small.jpg) no-repeat;
+  background-size: cover;
+  color: #00598c;
+  height: 44vh;
+  padding: 20px;
+}
+
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  padding: 10px 35px;
+  margin-top: 10px;
+}
+
+header .menu li a {
+  color: #00598c;
+  padding: 10px 0px;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+header .contact_btn {
+  display: inline-block;
+  background-color: #2196F3;
+  padding: 12px 30px;
+  color: white;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin: 10px auto;
+}
+
+.main_block {
+  padding: 30px 25px;
+}
+
+.main p {
+  font-size: 0.6em;
+  line-height: 2em;
+}
+
+.main .work p::after {
+  content: " ";
+  border-bottom: 1px solid #2196F3;
+  display: block;
+  width: 30%;
+  position: relative;
+  top: 30px;
+  margin: 0px auto;
+}
+
+.main .photo_box div {
+  height: 25vh;
+  margin: 25px 0px;
+}
+
+.main .photo_box div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.main .feature {
+  background-color: #F7F7F7;
+}
+
+.main .feature > p::after {
+  content: " ";
+  border-bottom: 1px solid #2196F3;
+  display: block;
+  width: 30%;
+  position: relative;
+  top: 30px;
+  margin: 0px auto;
+}
+
+.main .feature_details {
+  margin-top: 60px;
+}
+
+.main .feature_details div {
+  padding: 20px 15px;
+}
+
+.main .feature_details div i {
+  font-size: 40px;
+  color: #2196F3;
+}
+
+.main .quotations figure {
+  margin: 30px 0px;
+}
+
+.main .quotations figure blockquote {
+  font-size: 0.8em;
+  margin: 10px 20px;
+}
+
+.main .quotations figure figcaption {
+  font-size: 0.7em;
+  font-weight: 400;
+  margin: 15px 0px;
+}
+
+.main .quotations figure figcaption::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  border-top: 1px solid #555;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+.main .subscription {
+  background-color: #F7F7F7;
+}
+
+.main .subscription > p::before {
+  content: " ";
+  border-bottom: 1px solid #2196F3;
+  display: block;
+  width: 30%;
+  position: relative;
+  top: 30px;
+  margin: 0px auto;
+  top: 85px;
+}
+
+.main .subscription_form {
+  margin: 60px 0px 30px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .subscription_form #email {
+  display: block;
+  border: 1px solid rgba(85, 85, 85, 0.5);
+  padding: 10px;
+  margin: 20px;
+}
+
+.main .subscription_form button {
+  display: inline-block;
+  background-color: #2196F3;
+  padding: 12px 30px;
+  color: white;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin: 10px auto;
+  border: none;
+  width: 52%;
+}
+
+footer {
+  background-color: #414A4F;
+  padding: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.6em;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+footer .network i {
+  font-size: 20px;
+  color: white;
+  margin: 5px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,192 @@
+
+$text_color: #555;
+$text_header: #00598c;
+$blue_sky: #2196F3;
+$background_light: #F7F7F7;
+$background_dark: #414A4F;
+
+@mixin border_blue{
+    content: " ";
+    border-bottom: 1px solid $blue_sky;
+    display: block;
+    width: 30%;
+    position: relative;
+    top: 30px;
+    margin: 0px auto;
+}
+@mixin cta_blue {
+    display: inline-block;
+    background-color: $blue_sky;
+    padding: 12px 30px;
+    color: white;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin: 10px auto;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: $text_color;
+    h1{
+        font-weight: 400;
+        margin-bottom: 0px;
+        margin-top: 50px;
+    }
+    h2{
+        font-weight: 400;
+        font-size: 1.4em;
+    }
+    h3{
+        font-weight: 400;
+        font-size: 1em;
+        margin-top: 10px;
+    }
+    h4{
+        font-weight: 600;
+        font-size: 1em;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+header{
+    background: url(../../images/hero-small.jpg) no-repeat;
+    background-size: cover;
+    color: $text_header;
+    height: 44vh;
+    padding: 20px;
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 10px 35px;
+        margin-top: 10px;
+        li{
+            
+            a{
+                color: $text_header;
+                padding: 10px 0px;
+                font-size: 0.8em;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .contact_btn{
+        @include cta_blue();
+    }
+}
+
+
+.main{
+    &_block{
+        padding: 30px 25px;
+    }
+    p{
+        font-size: 0.6em;
+        line-height: 2em;
+    }
+    .work{
+        p::after{
+            @include border_blue();
+        }
+    }
+    .photo_box{
+        div{
+            height: 25vh;
+            margin: 25px 0px;
+            img{
+                object-fit:cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        
+    }
+    .feature{
+        background-color: $background_light;
+        &>p::after{
+            @include border_blue();
+        }
+        &_details{
+            margin-top: 60px;
+            div{
+                padding: 20px 15px;
+                i{
+                    font-size: 40px;
+                    color: $blue_sky;
+                }
+            }
+        }
+    }
+    .quotations{
+        figure{
+            margin: 30px 0px;
+            blockquote{
+                font-size: 0.8em;
+                margin: 10px 20px;
+            }
+            figcaption{
+                font-size: 0.7em;
+                font-weight: 400;
+                margin: 15px 0px;
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    border-top: 1px solid $text_color;
+                    vertical-align: middle;
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+    .subscription{
+        background-color: $background_light;
+        &>p::before{
+            @include border_blue();
+            top: 85px;
+        }
+        &_form{
+            margin: 60px 0px 30px 0px;
+            display: flex;
+            flex-direction: column;
+            #email{
+                display: block;
+                border: 1px solid rgba($text_color, .5);
+                padding: 10px;
+                margin: 20px;
+            }
+            button{
+                @include cta_blue();
+                border: none;
+                width: 52%;
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $background_dark;
+    padding: 50px;
+    color: rgba(white, .6);
+    font-size: 0.6em;
+    font-weight: 200;
+    text-transform: uppercase;
+    .network {
+        
+        i{
+        font-size: 20px;
+        color: white;
+        margin: 5px;
+        }
+    }
+}
+
+// mettre les hover pour la version desktop
