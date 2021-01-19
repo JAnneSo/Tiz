@@ -1,10 +1,15 @@
-
+/************ VARIABLES ************/
 $text_color: #555;
 $text_header: #00598c;
 $blue_sky: #2196F3;
 $background_light: #F7F7F7;
 $background_dark: #414A4F;
 
+$tablet_min: 600px;
+$tablet_max: 1024px;
+$desktop_min: 1025px;
+
+/************ MIXIN ************/
 @mixin border_blue{
     content: " ";
     border-bottom: 1px solid $blue_sky;
@@ -13,19 +18,25 @@ $background_dark: #414A4F;
     position: relative;
     top: 30px;
     margin: 0px auto;
+    @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+        width: 20%;
+        border: 1px solid $blue_sky;
+    }
 }
 @mixin cta_blue {
     display: inline-block;
     background-color: $blue_sky;
-    padding: 12px 30px;
+    padding: 10px 25px;
+    text-align: center;
     color: white;
     font-size: 0.75em;
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 4px;
-    margin: 10px auto;
+    
 }
 
+/************ STYLE ************/
 body{
     margin: 0;
     padding: 0;
@@ -36,19 +47,36 @@ body{
         font-weight: 400;
         margin-bottom: 0px;
         margin-top: 50px;
+        @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+            font-size: 60px;
+            padding-top: 30px;
+        }
+        @media only screen and (min-width:$desktop_min){
+            margin-top: 0px;
+            padding-bottom: 10px;
+        }
     }
     h2{
         font-weight: 400;
         font-size: 1.4em;
+        @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+            font-size: 32px;
+        }
     }
     h3{
         font-weight: 400;
         font-size: 1em;
         margin-top: 10px;
+        @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+            font-size: 1.7em;
+        }
     }
     h4{
         font-weight: 600;
         font-size: 1em;
+        @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+            font-size: 22px;
+        }
     }
     a{
         text-decoration: none;
@@ -59,38 +87,117 @@ header{
     background: url(../../images/hero-small.jpg) no-repeat;
     background-size: cover;
     color: $text_header;
-    height: 44vh;
+    height: 45%;
     padding: 20px;
+    min-height: 340px;
+    @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+        background: url(../../images/hero.jpg) no-repeat;
+        background-size: cover;
+        height: 200px;
+        min-height: 610px;
+    }
+    @media only screen and (min-width:$desktop_min){
+        background: url(../../images/hero.jpg) no-repeat;
+        background-size: cover;
+        height: 610px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logo{
+        background: url(../../images/tiz_logo_small.png) no-repeat;
+        background-size: cover;
+        height: 81px;
+        width: 250px;
+        margin: 0px auto;
+        @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+            background: url(../../images/tiz-logo.png) no-repeat;
+            height: 162px;
+            width: 500px;
+        }
+        @media only screen and (min-width:$desktop_min){
+            position: absolute;
+            top: 30px;
+            left: 50px;
+        }
+    }
     .menu{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         list-style-type: none;
-        padding: 10px 35px;
-        margin-top: 10px;
+        padding: 10px 0px;
+        margin: 10px auto;
+        @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+            margin: 40px auto;
+        }
+        @media only screen and (min-width:$desktop_min){
+            position: absolute;
+            top: 40px;
+            right: 0px;
+            padding-right: 20px;
+        }
         li{
-            
+            margin: 0px 5px;
+            @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                margin: 0px 10px;
+            }
+            @media only screen and (min-width:$desktop_min){
+                margin: 0px 20px;
+            }
             a{
                 color: $text_header;
                 padding: 10px 0px;
-                font-size: 0.8em;
+                font-size: 0.7em;
                 font-weight: 600;
                 text-transform: uppercase;
+                @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                    font-size: 1.1em;
+                }
+                @media only screen and (min-width:$desktop_min){
+                    color: white;
+                    &:hover{
+                        border-bottom: 2px solid white;
+                    }
+                }
             }
         }
     }
     .contact_btn{
         @include cta_blue();
+        margin: 10px auto;
+        @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+            font-size: 1.1em;
+            margin: 15px auto;
+        }
+        @media only screen and (min-width:$desktop_min){
+            margin: 20px auto;
+        }
     }
 }
 
 
 .main{
+    
     &_block{
         padding: 30px 25px;
+        @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+            padding: 80px 40px;
+        }
+        @media screen and (min-width:$desktop_min){
+            padding: 70px 100px;
+            
+        }
     }
     p{
-        font-size: 0.6em;
+        font-size: 0.7em;
         line-height: 2em;
+        @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+            font-size: 20px;
+        }
+        @media screen and (min-width:$desktop_min){
+            width: 50%;
+            margin: auto;
+        }
     }
     .work{
         p::after{
@@ -98,15 +205,41 @@ header{
         }
     }
     .photo_box{
-        div{
-            height: 25vh;
-            margin: 25px 0px;
-            img{
-                object-fit:cover;
-                height: 100%;
-                width: 100%;
+       
+        &_line{
+            div{
+                height: 25vh;
+                margin: 25px 0px;
+                @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                    margin: 0px 40px 40px 40px;
+                }
+                @media screen and (min-width:$desktop_min){
+                    margin: 15px 0px;
+                }
+                img{
+                    object-fit:cover;
+                    height: 100%;
+                    width: 100%;
+                }
             }
         }
+        .line1{
+            @media screen and (min-width:$desktop_min){
+                display: grid;
+                grid-template-rows: 100%;
+                grid-template-columns: 40% 60%;
+                grid-column-gap: 30px;
+            }
+        }
+        .line2{
+            @media screen and (min-width:$desktop_min){
+                display: grid;
+                grid-template-rows: 100%;
+                grid-template-columns: 60% 40%;
+                grid-column-gap: 30px;
+            }
+        }
+        
         
     }
     .feature{
@@ -116,11 +249,30 @@ header{
         }
         &_details{
             margin-top: 60px;
+            @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                margin-top: 80px;
+            }
+            @media screen and (min-width:$desktop_min){
+                display: flex;
+                justify-content: space-around;
+            }
             div{
                 padding: 20px 15px;
+                @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                    width: 67%;
+                    margin: 0px auto;
+                }
+                p{
+                    @media screen and (min-width:$desktop_min){
+                        width: 80%;
+                    }
+                }
                 i{
                     font-size: 40px;
                     color: $blue_sky;
+                    @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                        font-size: 50px;
+                    }
                 }
             }
         }
@@ -128,14 +280,30 @@ header{
     .quotations{
         figure{
             margin: 30px 0px;
+            @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                margin: 60px 0px;
+            }
             blockquote{
                 font-size: 0.8em;
                 margin: 10px 20px;
+                @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                    width: 80%;
+                    margin: 30px auto;
+                    font-size: 22px;
+                }
+                @media screen and (min-width:$desktop_min){
+                    width: 50%;
+                    margin: auto;
+                }
             }
             figcaption{
                 font-size: 0.7em;
                 font-weight: 400;
                 margin: 15px 0px;
+                @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                    font-size: 18px;
+                    margin: 20px 0px;
+                }
                 &::before{
                     content: "";
                     display: inline-block;
@@ -143,30 +311,78 @@ header{
                     border-top: 1px solid $text_color;
                     vertical-align: middle;
                     margin-right: 3px;
+                    @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                        width: 15px;
+                    }
                 }
             }
         }
     }
     .subscription{
         background-color: $background_light;
-        &>p::before{
+
+        &_info>p::after{
             @include border_blue();
-            top: 85px;
         }
         &_form{
-            margin: 60px 0px 30px 0px;
+            margin: 60px 0px 0px 0px;
+            padding-top: 50px;
             display: flex;
             flex-direction: column;
+            @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            @media screen and (min-width:$desktop_min){
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding-top: 20px;
+            }
             #email{
                 display: block;
                 border: 1px solid rgba($text_color, .5);
                 padding: 10px;
                 margin: 20px;
+                &::placeholder{
+                    color: rgba($text_color, .7);
+                }
+                @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                    display: inline-block;
+                    height: 40px;
+                    font-size: 18px;
+                    box-sizing: border-box;
+                    width: 50%;
+                }
+                @media screen and (min-width:$desktop_min){
+                    display: inline-block;
+                    height: 40px;
+                    font-size: 18px;
+                    box-sizing: border-box;
+                    width: 50%;
+                }
+                
             }
             button{
                 @include cta_blue();
                 border: none;
                 width: 52%;
+                margin: 10px auto;
+                @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                    font-size: 1.1em;
+                    width: 30%;
+                    margin: 0px;
+                    min-height: 40px;
+                    height: fit-content;
+                }
+                @media screen and (min-width:$desktop_min){
+                    height: 40px;
+                    font-size: 1.1em;
+                    box-sizing: border-box;
+                    width: 30%;
+                    margin: 0px;
+                }
             }
         }
     }
@@ -179,14 +395,26 @@ footer{
     font-size: 0.6em;
     font-weight: 200;
     text-transform: uppercase;
+    @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+        font-size: 0.8em;
+    }
+    @media screen and (min-width:$desktop_min){
+        font-size: 14px;
+    }
     .network {
-        
         i{
-        font-size: 20px;
-        color: white;
-        margin: 5px;
+            font-size: 20px;
+            color: white;
+            margin: 5px;
+            @media screen and (min-width:$tablet_min) and (max-width:$tablet_max){
+                font-size: 25px;
+                margin: 10px;
+            }
+            @media screen and (min-width:$desktop_min){
+                font-size: 30px;
+                margin: 10px;
+            }
         }
     }
 }
 
-// mettre les hover pour la version desktop

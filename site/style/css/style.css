@@ -1,3 +1,6 @@
+/************ VARIABLES ************/
+/************ MIXIN ************/
+/************ STYLE ************/
 body {
   margin: 0;
   padding: 0;
@@ -12,9 +15,29 @@ body h1 {
   margin-top: 50px;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  body h1 {
+    font-size: 60px;
+    padding-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  body h1 {
+    margin-top: 0px;
+    padding-bottom: 10px;
+  }
+}
+
 body h2 {
   font-weight: 400;
   font-size: 1.4em;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  body h2 {
+    font-size: 32px;
+  }
 }
 
 body h3 {
@@ -23,9 +46,21 @@ body h3 {
   margin-top: 10px;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  body h3 {
+    font-size: 1.7em;
+  }
+}
+
 body h4 {
   font-weight: 600;
   font-size: 1em;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  body h4 {
+    font-size: 22px;
+  }
 }
 
 body a {
@@ -36,34 +71,133 @@ header {
   background: url(../../images/hero-small.jpg) no-repeat;
   background-size: cover;
   color: #00598c;
-  height: 44vh;
+  height: 45%;
   padding: 20px;
+  min-height: 340px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  header {
+    background: url(../../images/hero.jpg) no-repeat;
+    background-size: cover;
+    height: 200px;
+    min-height: 610px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  header {
+    background: url(../../images/hero.jpg) no-repeat;
+    background-size: cover;
+    height: 610px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+header .logo {
+  background: url(../../images/tiz_logo_small.png) no-repeat;
+  background-size: cover;
+  height: 81px;
+  width: 250px;
+  margin: 0px auto;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  header .logo {
+    background: url(../../images/tiz-logo.png) no-repeat;
+    height: 162px;
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  header .logo {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+  }
 }
 
 header .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style-type: none;
-  padding: 10px 35px;
-  margin-top: 10px;
+  padding: 10px 0px;
+  margin: 10px auto;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  header .menu {
+    margin: 40px auto;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  header .menu {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    padding-right: 20px;
+  }
+}
+
+header .menu li {
+  margin: 0px 5px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  header .menu li {
+    margin: 0px 10px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  header .menu li {
+    margin: 0px 20px;
+  }
 }
 
 header .menu li a {
   color: #00598c;
   padding: 10px 0px;
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  header .menu li a {
+    font-size: 1.1em;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  header .menu li a {
+    color: white;
+  }
+  header .menu li a:hover {
+    border-bottom: 2px solid white;
+  }
 }
 
 header .contact_btn {
   display: inline-block;
   background-color: #2196F3;
-  padding: 12px 30px;
+  padding: 10px 25px;
+  text-align: center;
   color: white;
   font-size: 0.75em;
   font-weight: 700;
@@ -72,13 +206,51 @@ header .contact_btn {
   margin: 10px auto;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  header .contact_btn {
+    font-size: 1.1em;
+    margin: 15px auto;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  header .contact_btn {
+    margin: 20px auto;
+  }
+}
+
 .main_block {
   padding: 30px 25px;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main_block {
+    padding: 80px 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .main_block {
+    padding: 70px 100px;
+  }
+}
+
 .main p {
-  font-size: 0.6em;
+  font-size: 0.7em;
   line-height: 2em;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .main p {
+    width: 50%;
+    margin: auto;
+  }
 }
 
 .main .work p::after {
@@ -91,16 +263,59 @@ header .contact_btn {
   margin: 0px auto;
 }
 
-.main .photo_box div {
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .work p::after {
+    width: 20%;
+    border: 1px solid #2196F3;
+  }
+}
+
+.main .photo_box_line div {
   height: 25vh;
   margin: 25px 0px;
 }
 
-.main .photo_box div img {
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .photo_box_line div {
+    margin: 0px 40px 40px 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .main .photo_box_line div {
+    margin: 15px 0px;
+  }
+}
+
+.main .photo_box_line div img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+  .main .photo_box .line1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+    grid-column-gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .main .photo_box .line2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
+    grid-column-gap: 30px;
+  }
 }
 
 .main .feature {
@@ -117,12 +332,48 @@ header .contact_btn {
   margin: 0px auto;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .feature > p::after {
+    width: 20%;
+    border: 1px solid #2196F3;
+  }
+}
+
 .main .feature_details {
   margin-top: 60px;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .feature_details {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .main .feature_details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .main .feature_details div {
   padding: 20px 15px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .feature_details div {
+    width: 67%;
+    margin: 0px auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .main .feature_details div p {
+    width: 80%;
+  }
 }
 
 .main .feature_details div i {
@@ -130,8 +381,20 @@ header .contact_btn {
   color: #2196F3;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .feature_details div i {
+    font-size: 50px;
+  }
+}
+
 .main .quotations figure {
   margin: 30px 0px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .quotations figure {
+    margin: 60px 0px;
+  }
 }
 
 .main .quotations figure blockquote {
@@ -139,10 +402,32 @@ header .contact_btn {
   margin: 10px 20px;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .quotations figure blockquote {
+    width: 80%;
+    margin: 30px auto;
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .main .quotations figure blockquote {
+    width: 50%;
+    margin: auto;
+  }
+}
+
 .main .quotations figure figcaption {
   font-size: 0.7em;
   font-weight: 400;
   margin: 15px 0px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .quotations figure figcaption {
+    font-size: 18px;
+    margin: 20px 0px;
+  }
 }
 
 .main .quotations figure figcaption::before {
@@ -154,11 +439,17 @@ header .contact_btn {
   margin-right: 3px;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .quotations figure figcaption::before {
+    width: 15px;
+  }
+}
+
 .main .subscription {
   background-color: #F7F7F7;
 }
 
-.main .subscription > p::before {
+.main .subscription_info > p::after {
   content: " ";
   border-bottom: 1px solid #2196F3;
   display: block;
@@ -166,11 +457,18 @@ header .contact_btn {
   position: relative;
   top: 30px;
   margin: 0px auto;
-  top: 85px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .subscription_info > p::after {
+    width: 20%;
+    border: 1px solid #2196F3;
+  }
 }
 
 .main .subscription_form {
-  margin: 60px 0px 30px 0px;
+  margin: 60px 0px 0px 0px;
+  padding-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,6 +478,37 @@ header .contact_btn {
           flex-direction: column;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .subscription_form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .main .subscription_form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 20px;
+  }
+}
+
 .main .subscription_form #email {
   display: block;
   border: 1px solid rgba(85, 85, 85, 0.5);
@@ -187,18 +516,80 @@ header .contact_btn {
   margin: 20px;
 }
 
+.main .subscription_form #email::-webkit-input-placeholder {
+  color: rgba(85, 85, 85, 0.7);
+}
+
+.main .subscription_form #email:-ms-input-placeholder {
+  color: rgba(85, 85, 85, 0.7);
+}
+
+.main .subscription_form #email::-ms-input-placeholder {
+  color: rgba(85, 85, 85, 0.7);
+}
+
+.main .subscription_form #email::placeholder {
+  color: rgba(85, 85, 85, 0.7);
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .subscription_form #email {
+    display: inline-block;
+    height: 40px;
+    font-size: 18px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .main .subscription_form #email {
+    display: inline-block;
+    height: 40px;
+    font-size: 18px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 50%;
+  }
+}
+
 .main .subscription_form button {
   display: inline-block;
   background-color: #2196F3;
-  padding: 12px 30px;
+  padding: 10px 25px;
+  text-align: center;
   color: white;
   font-size: 0.75em;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 4px;
-  margin: 10px auto;
   border: none;
   width: 52%;
+  margin: 10px auto;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .main .subscription_form button {
+    font-size: 1.1em;
+    width: 30%;
+    margin: 0px;
+    min-height: 40px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .main .subscription_form button {
+    height: 40px;
+    font-size: 1.1em;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 30%;
+    margin: 0px;
+  }
 }
 
 footer {
@@ -210,9 +601,35 @@ footer {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  footer {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  footer {
+    font-size: 14px;
+  }
+}
+
 footer .network i {
   font-size: 20px;
   color: white;
   margin: 5px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  footer .network i {
+    font-size: 25px;
+    margin: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  footer .network i {
+    font-size: 30px;
+    margin: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
